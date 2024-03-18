@@ -12,7 +12,7 @@ namespace Ticketing
     public partial class TicketsForm : Form
     {
         TicketPrice mTicketPrice;
-        int mSection = 2;
+        int mSection = 3;
         int mQuantity = 0;
         bool mDiscount = false;
 
@@ -39,6 +39,8 @@ namespace Ticketing
                 { mSection = 2; }
             if (radBox.Checked)
                 { mSection = 3; }
+            if (radBack.Checked) 
+                { mSection = 4; }
 
             mTicketPrice = new TicketPrice(mSection, mQuantity, mDiscount);
 
